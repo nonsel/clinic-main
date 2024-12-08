@@ -75,9 +75,9 @@ if (!isset($_SESSION['role'])) {
                                                   // output data of each row
                                                   while($row = $result->fetch_assoc()) {
 
-                                                        $status = "Claimed";
+                                                        $status = "Unclaimed";
                                                         if($row['status']==1){
-                                                            $status = "Unclaimed";
+                                                            $status = "Claimed";
                                                         }
 
                                                         $table = "";
