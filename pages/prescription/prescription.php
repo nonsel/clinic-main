@@ -12,7 +12,7 @@ if (!isset($_SESSION['role'])) {
     <body class="skin-black">
         <!-- header logo: style can be found in header.less -->
         <?php
-        include "../connection.php";
+            include "../connection.php";
         ?>
         <?php include('../header.php'); ?>
 
@@ -38,7 +38,65 @@ if (!isset($_SESSION['role'])) {
                                             class="fa fa-user-plus" aria-hidden="true"></i> Add Prescriptions</button>
                                 </div>
                             </div><!-- /.box-header -->
-                            <h1>Prescription table here</h1>
+
+                            <table id="table" class="table table-bordered table-striped">
+
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 20px !important;"><input type="checkbox" name="chk_delete[]" class="cbxMain" onchange="checkMain(this)"/></th>
+                                                <th>Prescription ID</th>
+                                                <th>Name</th>
+                                                <th>Prescription Date</th>
+                                                <th>Daignosis</th>
+                                                <th>Frame Type</th>
+                                                <th style="width: 40px !important;">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                                $result = $con->query("SELECT 
+                                                                            pres.*,
+                                                                            (SELECT CONCAT(firstname,' ',lastname) FROM tblpatient p WHERE p.id = pres.patient_id ) as full_name
+                                                                       FROM 
+                                                                            tblprescription pres
+                                                                       WHERE
+                                                                            is_delete=0");
+
+
+                                                
+                                                if ($result->num_rows > 0) {
+                                                  // output data of each row
+                                                  while($row = $result->fetch_assoc()) {
+
+                                                        $table = "";
+                                                        $table .="<tr>";
+                                                            $table .="<td><input type='checkbox' name='chk_delete[]' class='chk_delete' value='".$row['id']."'/></td>";
+                                                            $table .="<td> PX-00".$row["id"]."</td>";
+                                                            $table .="<td>".$row["full_name"]."</td>";
+                                                            $table .="<td>".$row["prescription_date"]."</td>";
+                                                            $table .="<td>".$row["diagnosis"]."</td>";
+                                                            $table .="<td>".$row["frame_type"]."</td>";
+                                                            $table .= "<td class='d-flex justify-content-between'>
+                                                                          <button class='btn btn-primary btn-sm btn-edit' id='".$row['id']."'>
+                                                                            <i class='fa fa-pencil-square-o' aria-hidden='true'></i> Edit
+                                                                          </button>
+                                                                          <button class='btn btn-danger btn-sm btn-delete' data-toggle='modal' id='".$row['id']."'>
+                                                                                <i class='fa fa-trash' aria-hidden='true'></i> Delete
+                                                                          </button> 
+                                                                    </td>";
+                                                        echo $table .="</tr>";
+
+                                                  }
+                                                } else {
+                                                  echo "0 results";
+                                                }
+
+
+                                            ?>
+                                        </tbody>
+
+                            </table>
+
                         </div><!-- /.box -->
 
                         <?php include "../edit_notif.php"; ?>
@@ -46,6 +104,7 @@ if (!isset($_SESSION['role'])) {
                         <?php include "../delete_notif.php"; ?>
                         <?php include "../duplicate_error.php"; ?>
                         <?php include "add_modal.php"; ?>
+                        <?php include "edit_modal.php"; ?>
                         <?php include "function.php"; ?>
 
                     </div> <!-- /.row -->
@@ -58,8 +117,82 @@ include "../footer.php"; ?>
     <script type="text/javascript">
         $(function () {
             $("#table").dataTable({
-                "aoColumnDefs": [{ "bSortable": false, "aTargets": [0, 7] }], "aaSorting": []
+                "aoColumnDefs": [{ "bSortable": false, "aTargets": [0, 5] }], "aaSorting": []
             });
+
+
+        });
+
+        $(".btn-edit").click(function(){
+            let id = $(this).attr("id");
+
+            $.ajax({
+                url: "function_additional.php",
+                type: "POST",
+                data: {get_prescription:1,id:id},
+                dataType: 'json',
+                success: function(response){
+
+                    a = response[0];
+                    let form = $("#form-edit");
+                    for(x in a){
+                        form.find(`[name="${x}"]`).val(a[x]);
+
+                    }
+
+                     $("#editModal").modal("show");
+
+                },
+                error: function(){
+
+                }
+            });//END :: AJAX
+            
+        });
+
+
+        $("#form-edit").submit(function(e){
+            e.preventDefault();
+
+            var form = $(this);
+
+            $.ajax({
+                url: "function_additional.php",
+                type: "POST",
+                data: form.serialize()+"&update=1",
+                success: function(response){
+                    location.reload();
+                },
+                error: function(){
+
+                }
+            });//END :: AJAX
+
+
+        })
+
+
+        $(".btn-delete").click(function(){
+            let id = $(this).attr("id");
+
+            if(confirm("Are you sure to delete?")){
+
+                $.ajax({
+                    url: "function_additional.php",
+                    type: "POST",
+                    data: {delete:1,id:id},
+                    success: function(response){
+
+                        location.reload();
+
+                    },
+                    error: function(){
+
+                    }
+                });//END :: AJAX
+
+            }
+            
         });
     </script>
 </body>

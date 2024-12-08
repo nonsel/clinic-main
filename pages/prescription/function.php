@@ -1,44 +1,177 @@
 <?php
-
 if(isset($_POST['btn_add'])){
-    $txt_course = $_POST['txt_course'];
+    $patient = $_POST['a_patient'];
+    $date = date("Y-m-d");
+
+    $refraction_od_sph = $_POST['a_refraction_od_sph'];
+    $refraction_od_cyl = $_POST['a_refraction_od_cyl'];
+    $refraction_od_axis = $_POST['a_refraction_od_axis'];
+    $refraction_od_add = $_POST['a_refraction_od_add'];
+    $refraction_od_prism_base = $_POST['a_refraction_od_prism_base'];
+    $refraction_od_pd = $_POST['a_refraction_od_pd'];
+
+    $refraction_os_sph = $_POST['a_refraction_os_sph'];
+    $refraction_os_cyl = $_POST['a_refraction_os_cyl'];
+    $refraction_os_axis = $_POST['a_refraction_os_axis'];
+    $refraction_os_add = $_POST['a_refraction_os_add'];
+    $refraction_os_prism_base = $_POST['a_refraction_os_prism_base'];
+    $refraction_os_pd = $_POST['a_refraction_os_pd'];
+
+    $spectacle_od_sph = $_POST['a_spectacle_od_sph'];
+    $spectacle_od_cyl = $_POST['a_spectacle_od_cyl'];
+    $spectacle_od_axis = $_POST['a_spectacle_od_axis'];
+    $spectacle_od_add = $_POST['a_spectacle_od_add'];
+    $spectacle_od_prism_base = $_POST['a_spectacle_od_prism_base'];
+    $spectacle_od_pd = $_POST['a_spectacle_od_pd'];
+
+    $spectacle_os_sph = $_POST['a_spectacle_os_sph'];
+    $spectacle_os_cyl = $_POST['a_spectacle_os_cyl'];
+    $spectacle_os_axis = $_POST['a_spectacle_os_axis'];
+    $spectacle_os_add = $_POST['a_spectacle_os_add'];
+    $spectacle_os_prism_base = $_POST['a_spectacle_os_prism_base'];
+    $spectacle_os_pd = $_POST['a_spectacle_os_pd'];
+
+    $contact_lens_od_sph = $_POST['a_contact_lens_od_sph'];
+    $contact_lens_od_cyl = $_POST['a_contact_lens_od_cyl'];
+    $contact_lens_od_axis = $_POST['a_contact_lens_od_axis'];
+    $contact_lens_od_add = $_POST['a_contact_lens_od_add'];
+    $contact_lens_od_prism_base = $_POST['a_contact_lens_od_prism_base'];
+    $contact_lens_od_pd = $_POST['a_contact_lens_od_pd'];
+
+    $contact_lens_os_sph = $_POST['a_contact_lens_os_sph'];
+    $contact_lens_os_cyl = $_POST['a_contact_lens_os_cyl'];
+    $contact_lens_os_axis = $_POST['a_contact_lens_os_axis'];
+    $contact_lens_os_add = $_POST['a_contact_lens_os_add'];
+    $contact_lens_os_prism_base = $_POST['a_contact_lens_os_prism_base'];
+    $contact_lens_os_pd = $_POST['a_contact_lens_os_pd'];
+
+    $diagnosis = $_POST['a_diagnosis'];
+    $frame_type = $_POST['a_frame_type'];
 
     if(isset($_SESSION['role'])){
-        $action = 'Added Course with 
-        Course : ' . $txt_course . '';
+
+        $res = mysqli_query($con,"INSERT INTO 
+                                            tblprescription 
+                                                    (
+
+                                                    patient_id,
+                                                    prescription_date,
+
+                                                    refraction_od_sph,
+                                                    refraction_od_cyl,
+                                                    refraction_od_axis,
+                                                    refraction_od_add,
+                                                    refraction_od_prism_base,
+                                                    refraction_od_pd,
+
+                                                    refraction_os_sph,
+                                                    refraction_os_cyl,
+                                                    refraction_os_axis,
+                                                    refraction_os_add,
+                                                    refraction_os_prism_base,
+                                                    refraction_os_pd,
+
+                                                    spectacle_od_sph,
+                                                    spectacle_od_cyl,
+                                                    spectacle_od_axis,
+                                                    spectacle_od_add,
+                                                    spectacle_od_prism_base,
+                                                    spectacle_od_pd,
+
+                                                    spectacle_os_sph,
+                                                    spectacle_os_cyl,
+                                                    spectacle_os_axis,
+                                                    spectacle_os_add,
+                                                    spectacle_os_prism_base,
+                                                    spectacle_os_pd,
+
+                                                    contact_lens_od_sph,
+                                                    contact_lens_od_cyl,
+                                                    contact_lens_od_axis,
+                                                    contact_lens_od_add,
+                                                    contact_lens_od_prism_base,
+                                                    contact_lens_od_pd,
+
+                                                    contact_lens_os_sph,
+                                                    contact_lens_os_cyl,
+                                                    contact_lens_os_axis,
+                                                    contact_lens_os_add,
+                                                    contact_lens_os_prism_base,
+                                                    contact_lens_os_pd,
+
+                                                    diagnosis,
+                                                    frame_type) 
+
+                                            values (
+                                                    '$patient',
+                                                    '$date',
+                                                    '$refraction_od_sph',
+                                                    '$refraction_od_cyl',
+                                                    '$refraction_od_axis',
+                                                    '$refraction_od_add',
+                                                    '$refraction_od_prism_base',
+                                                    '$refraction_od_pd',
+
+                                                    '$refraction_os_sph',
+                                                    '$refraction_os_cyl',
+                                                    '$refraction_os_axis',
+                                                    '$refraction_os_add',
+                                                    '$refraction_os_prism_base',
+                                                    '$refraction_os_pd',
+
+                                                    '$spectacle_od_sph',
+                                                    '$spectacle_od_cyl',
+                                                    '$spectacle_od_axis',
+                                                    '$spectacle_od_add',
+                                                    '$spectacle_od_prism_base',
+                                                    '$spectacle_od_pd',
+
+                                                    '$spectacle_os_sph',
+                                                    '$spectacle_os_cyl',
+                                                    '$spectacle_os_axis',
+                                                    '$spectacle_os_add',
+                                                    '$spectacle_os_prism_base',
+                                                    '$spectacle_os_pd',
+
+                                                    '$contact_lens_od_sph',
+                                                    '$contact_lens_od_cyl',
+                                                    '$contact_lens_od_axis',
+                                                    '$contact_lens_od_add',
+                                                    '$contact_lens_od_prism_base',
+                                                    '$contact_lens_od_pd',
+
+                                                    '$contact_lens_os_sph',
+                                                    '$contact_lens_os_cyl',
+                                                    '$contact_lens_os_axis',
+                                                    '$contact_lens_os_add',
+                                                    '$contact_lens_os_prism_base',
+                                                    '$contact_lens_os_pd',
+
+                                                    '$diagnosis',
+                                                    '$frame_type')"); 
+
+        $action = 'Added Prescription ID: '.$res['last_inset_id'];
         $iquery = mysqli_query($con,"INSERT INTO tbllogs (user,logdate,action) values ('".$_SESSION['userid']."', NOW(), '".$action."')");
     }
 
-    $query = mysqli_query($con,"INSERT INTO tblcourse (course) 
-    VALUES ('$txt_course')") or die('Error: ' . mysqli_error($con));
-    if($query == true)
-    {
-        $_SESSION['added'] = 1;
-        header ("location: ".$_SERVER['REQUEST_URI']);
-    } 
+    $_SESSION['added'] = 1;
+    header ("location: ".$_SERVER['REQUEST_URI']);
+
     
 }
 
 
 if (isset($_POST['btn_save'])) {
-    $txt_id = $_POST['hidden_id'];
-    $txt_course = $_POST['txt_course'];
 
-    if (isset($_SESSION['role'])) {
-        $action = 'Edit Course with Course : ' . $txt_course;
-        $iquery = mysqli_query($con, "INSERT INTO tbllogs (user, logdate, action) values ('" . $_SESSION['userid'] . "', NOW(), '" . $action . "')");
-    }
 
-    $update_query = mysqli_query($con, "UPDATE tblcourse SET 
-        `course` = '".$txt_course."'
+    $update_query = mysqli_query($con, "UPDATE 
+                                            tblcourse SET 
+                                                `patient` = ''
         WHERE `id` = '".$txt_id."'") or die('Error: ' . mysqli_error($con));
 
-    if ($update_query) {
-        $_SESSION['edited'] = 1;
-        header("location: ".$_SERVER['REQUEST_URI']);
-    } else {
-        echo 'Error updating record: ' . mysqli_error($con);
-    }
+
+    header("location: ".$_SERVER['REQUEST_URI']);
+
 }
 
 
