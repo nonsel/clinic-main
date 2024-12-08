@@ -1,0 +1,6 @@
+- **Fix delete button on pateint**
+- **Fix crud issue in inventory -> product**
+- **Fix delete issue in supplier**: It needs to be deleted twice for it to delete. please fix
+- **Fix crud on user button**
+- **Add the appropriate fields to the form, remove none existing fields based on list-requirments file**
+- - **Create module prescription, special prescription and payments**
