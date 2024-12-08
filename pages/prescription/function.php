@@ -33,7 +33,7 @@ if(isset($_POST['btn_add'])){
 
     $contact_lens_od_sph = $_POST['a_contact_lens_od_sph'];
     $contact_lens_od_cyl = $_POST['a_contact_lens_od_cyl'];
-    $contact_lens_od_axis = $_POST['a_contact_lens_od_axis'];
+    $contact_lens_od_axis = $_POST['a_ontact_lens_od_axis'];
     $contact_lens_od_add = $_POST['a_contact_lens_od_add'];
     $contact_lens_od_prism_base = $_POST['a_contact_lens_od_prism_base'];
     $contact_lens_od_pd = $_POST['a_contact_lens_od_pd'];
@@ -53,54 +53,54 @@ if(isset($_POST['btn_add'])){
         $res = mysqli_query($con,"INSERT INTO 
                                             tblprescription 
                                                     (
+                                                        patient_id,
+                                                        prescription_date,
 
-                                                    patient_id,
-                                                    prescription_date,
+                                                        refraction_od_sph,
+                                                        refraction_od_cyl,
+                                                        refraction_od_axis,
+                                                        refraction_od_add,
+                                                        refraction_od_prism_base,
+                                                        refraction_od_pd,
 
-                                                    refraction_od_sph,
-                                                    refraction_od_cyl,
-                                                    refraction_od_axis,
-                                                    refraction_od_add,
-                                                    refraction_od_prism_base,
-                                                    refraction_od_pd,
+                                                        refraction_os_sph,
+                                                        refraction_os_cyl,
+                                                        refraction_os_axis,
+                                                        refraction_os_add,
+                                                        refraction_os_prism_base,
+                                                        refraction_os_pd,
 
-                                                    refraction_os_sph,
-                                                    refraction_os_cyl,
-                                                    refraction_os_axis,
-                                                    refraction_os_add,
-                                                    refraction_os_prism_base,
-                                                    refraction_os_pd,
+                                                        spectacle_od_sph,
+                                                        spectacle_od_cyl,
+                                                        spectacle_od_axis,
+                                                        spectacle_od_add,
+                                                        spectacle_od_prism_base,
+                                                        spectacle_od_pd,
 
-                                                    spectacle_od_sph,
-                                                    spectacle_od_cyl,
-                                                    spectacle_od_axis,
-                                                    spectacle_od_add,
-                                                    spectacle_od_prism_base,
-                                                    spectacle_od_pd,
+                                                        spectacle_os_sph,
+                                                        spectacle_os_cyl,
+                                                        spectacle_os_axis,
+                                                        spectacle_os_add,
+                                                        spectacle_os_prism_base,
+                                                        spectacle_os_pd,
 
-                                                    spectacle_os_sph,
-                                                    spectacle_os_cyl,
-                                                    spectacle_os_axis,
-                                                    spectacle_os_add,
-                                                    spectacle_os_prism_base,
-                                                    spectacle_os_pd,
+                                                        contact_lens_od_sph,
+                                                        contact_lens_od_cyl,
+                                                        contact_lens_od_axis,
+                                                        contact_lens_od_add,
+                                                        contact_lens_od_prism_base,
+                                                        contact_lens_od_pd,
 
-                                                    contact_lens_od_sph,
-                                                    contact_lens_od_cyl,
-                                                    contact_lens_od_axis,
-                                                    contact_lens_od_add,
-                                                    contact_lens_od_prism_base,
-                                                    contact_lens_od_pd,
+                                                        contact_lens_os_sph,
+                                                        contact_lens_os_cyl,
+                                                        contact_lens_os_axis,
+                                                        contact_lens_os_add,
+                                                        contact_lens_os_prism_base,
+                                                        contact_lens_os_pd,
 
-                                                    contact_lens_os_sph,
-                                                    contact_lens_os_cyl,
-                                                    contact_lens_os_axis,
-                                                    contact_lens_os_add,
-                                                    contact_lens_os_prism_base,
-                                                    contact_lens_os_pd,
-
-                                                    diagnosis,
-                                                    frame_type) 
+                                                        diagnosis,
+                                                        frame_type
+                                                    ) 
 
                                             values (
                                                     '$patient',
