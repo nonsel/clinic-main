@@ -23,7 +23,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Customer Name:</label>
-                        <select name="a_patient" class="form-control input-sm select2" style="width:100%" required="">
+                        <select name="txt_customer" class="form-control input-sm select2" style="width:100%" required="">
                             <option disabled selected value="">-- Select --</option>
                             <?php
                                     $patient = mysqli_query($con,"SELECT * FROM tblpatient");

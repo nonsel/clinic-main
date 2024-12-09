@@ -56,7 +56,7 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $squery = mysqli_query($con, "SELECT DISTINCT o.transno, o.customer, o.total, o.user_id, u.username
+                                            $squery = mysqli_query($con, "SELECT DISTINCT o.transno, o.total, o.user_id, u.username, (SELECT CONCAT(firstname,' ',lastname) FROM tblpatient p WHERE p.id = o.customer) as customer
                                             FROM tblorder o
                                             INNER JOIN tbluser u ON o.user_id = u.id;");
                                             while($row = mysqli_fetch_array($squery))
