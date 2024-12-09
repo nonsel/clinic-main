@@ -58,11 +58,13 @@
                                             <tr>
                                                 <th style="width: 20px !important;"><input type="checkbox" name="chk_delete[]" class="cbxMain" onchange="checkMain(this)"/></th>
                                                 <th>Name</th>
-                                                <th>Category</th>
                                                 <th>Date Ordered</th>
                                                 <th>Model Number</th>
-                                                <th>Frame Brand</th>
-                                                <th>Frame Type</th>
+                                                <th>Lens Coating</th>
+                                                <th>SPH</th>
+                                                <th>ADD</th>
+                                                <th>Qunatity</th>
+                                                <th>Price</th>
                                                 <th style="width: 40px !important;">Action</th>
                                             </tr>
                                         </thead>
@@ -93,11 +95,13 @@
                                                 <tr>
                                                     <td><input type="checkbox" name="chk_delete[]" class="chk_delete" value="'.$row['id'].'" /></td>
                                                     <td>'.$row['name'].'</td>
-                                                    <td>'.$category.'</td>
                                                     <td>'.$row['date_created'].'</td>
                                                     <td>'.$row['model_number'].'</td>
-                                                    <td>'.$row['frame_brand'].'</td>
-                                                    <td>'.$row['frame_type'].'</td>
+                                                    <td>'.$row['lens_coating'].'</td>
+                                                    <td>'.$row['sph'].'</td>
+                                                    <td>'.$row['i_add'].'</td>
+                                                    <td>'.$row['qty'].'</td>
+                                                    <td>'.$row['price'].'</td>
                                                     <td class="d-flex justify-content-between">
                                                         <button class="btn btn-primary btn-sm" data-target="#editModal'.$row['id'].'" data-toggle="modal">
                                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit

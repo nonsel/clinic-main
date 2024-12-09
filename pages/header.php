@@ -1,9 +1,9 @@
   <?php
 
    echo  '<header class="header">
-            <a href="#" class="logo">
+            <a href="#" class="logo" id="sidebar-logo">
             Patient Record System
-                <img src="../../img/logo.png" class="logo-img" style="height:100px; width:100px;"/>
+                
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">

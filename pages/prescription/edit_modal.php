@@ -13,7 +13,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Rx ID:</label>
-                                    <input name="id" class="form-control input-sm" type="text readonly" />
+                                    <input name="id" class="form-control input-sm" type="text" readonly/>
                                 </div>
                             </div>
 
@@ -370,7 +370,7 @@
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default btn-sm" data-dismiss="modal" value="Cancel"/>
-                        <input type="submit" class="btn btn-success btn-sm" name="btn_add" id="btn_add" value="Create"/>
+                        <input type="submit" class="btn btn-success btn-sm" name="btn_add" id="btn_add" value="Update"/>
                     </div>
                 </div>
               </div>

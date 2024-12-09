@@ -6,8 +6,8 @@ echo '
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
-                        
-                        <div class="pull-left info" style= margin-top:80px;>
+                        <img src="../../img/logo.png" class="logo-img" style="width:100%;"/>
+                        <div class="pull-left info">
                             <h4>Hello, ' . $_SESSION['role'] . '</h4>
 
                         </div>

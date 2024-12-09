@@ -52,7 +52,6 @@
                                                 <th>Price</th>
                                                 <th>Quantity</th>
                                                 <th>Subtotal</th>
-                                                <th>Image</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -69,7 +68,6 @@
                                                     <td>' . $row['price'] . '</td>
                                                     <td>' . $row['quantity'] . '</td>
                                                     <td>' . $row['subtotal'] . '</td>
-                                                    <td style="width:70px;"><image src="../../assets/img/'.basename($row['image']).'" style="width:60px;height:60px;"/></td>
                                                   </tr>
                                                 ';
 

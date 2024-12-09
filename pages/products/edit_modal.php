@@ -32,20 +32,12 @@
                                 <input name="i_model_number" class="form-control input-sm" type="text" value="'.$row['model_number'].'" required=""/>
                             </div>
 
-                            <div class="form-group">
-                                <label>Frame Brand:</label>
-                                <input name="i_frame_brand" class="form-control input-sm" type="text" value="'.$row['frame_brand'].'" required=""/>
-                            </div>
 
                             <div class="form-group">
                                 <label>Frame Type:</label>
                                 <input name="i_frame_type" class="form-control input-sm" type="text" value="'.$row['frame_type'].'" required=""/>
                             </div>
 
-                            <div class="form-group">
-                                <label>Lens Type:</label>
-                                <input name="i_lens_type" class="form-control input-sm" type="text" value="'.$row['lens_type'].'" required=""/>
-                            </div>
 
                             <div class="form-group">
                                 <label>Lens Coating:</label>

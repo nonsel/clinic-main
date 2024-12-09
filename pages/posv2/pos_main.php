@@ -169,6 +169,7 @@ if (!isset($_SESSION['role'])) {
                                         <tbody>
                                             <?php
                                             $user = mysqli_query($con, "SELECT * FROM tbluser WHERE id = '" . $_SESSION['userid'] . "'");
+                                            $order_id = "";
                                             $squery = mysqli_query($con, "SELECT
                                                 o.id,
                                                 o.product_id,
@@ -188,6 +189,7 @@ if (!isset($_SESSION['role'])) {
                                             WHERE o.user_id = '" . $_SESSION['userid'] . "' AND transno IS NULL");
                                             
                                             while ($row = mysqli_fetch_array($squery)) {
+                                                $order_id = $row['id'];
                                                 echo '
                                                 <tr>
                                                     <td>' . $row['name'] . '</td>

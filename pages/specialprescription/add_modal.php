@@ -99,12 +99,77 @@
                             </div>
                         </div>
 
-                        <div class="col-md-12">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label>OD QUANITY:</label>
                                 <input name="od_qty" class="form-control input-sm" type="number" value=""/>
                             </div>
                         </div>
+
+
+
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <hr>
+                            </div>
+                        </div>
+                        
+
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>OS SPH:</label>
+                                <input name="os_sph" class="form-control input-sm" type="text" value=""/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>OS CYL:</label>
+                                <input name="os_cyl" class="form-control input-sm" type="text" value=""/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>OS AXIS:</label>
+                                <input name="os_axis" class="form-control input-sm" type="text" value=""/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>OS ADD:</label>
+                                <input name="os_add" class="form-control input-sm" type="text" value=""/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>OS PRISM/BASE:</label>
+                                <input name="os_prism_base" class="form-control input-sm" type="text" value=""/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>OS PD:</label>
+                                <input name="os_pd" class="form-control input-sm" type="text" value=""/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>OS QUANITY:</label>
+                                <input name="os_qty" class="form-control input-sm" type="number" value=""/>
+                            </div>
+                        </div>
+
+
+
+
+
 
                         <div class="col-md-12">
                             <div class="form-group">

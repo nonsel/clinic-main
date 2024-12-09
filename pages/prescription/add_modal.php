@@ -44,7 +44,7 @@
                             <!--****************************** OD RIGHT ******************************!-->
                             <div class="col-md-12" style="margin-top: 30px;">
                                 <div class="form-group">
-                                    <label><h3>OD (Right)</h3></label>
+                                    <label><h3>REFRACTION OD (Right)</h3></label>
                                 </div>
                             </div>
 
@@ -94,7 +94,7 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label><h3>OS (LEFT)</h3></label>
+                                    <label><h3>REFRACTION OS (LEFT)</h3></label>
                                 </div>
                             </div>
 
@@ -248,7 +248,7 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label><h3>CONTACT LENS (LEFT)</h3></label>
+                                    <label><h3>CONTACT LENS (RIGHT)</h3></label>
                                 </div>
                             </div>
 

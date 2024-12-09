@@ -5,7 +5,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Manage Products Offer</h4>
+                        <h4 class="modal-title">Add Products Form</h4>
                     </div>
                     <div class="modal-body">
                         
@@ -30,20 +30,20 @@
                                     <input name="a_model_number" class="form-control input-sm" type="text" required=""/>
                                 </div>
                                 
-                                <div class="form-group">
+<!--                                 <div class="form-group">
                                     <label>Frame Brand:</label>
                                     <input name="a_frame_brand" class="form-control input-sm" type="text" required=""/>
-                                </div>
+                                </div> -->
                                 
                                 <div class="form-group">
                                     <label>Frame Type:</label>
                                     <input name="a_frame_type" class="form-control input-sm" type="text" required=""/>
                                 </div>
 
-                                <div class="form-group">
+<!--                                 <div class="form-group">
                                     <label>Lens Type:</label>
                                     <input name="a_lens_type" class="form-control input-sm" type="text" required=""/>
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <label>Lens Coating:</label>

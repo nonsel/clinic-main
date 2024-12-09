@@ -68,6 +68,13 @@ if (!isset($_SESSION['role'])) {
                                                   // output data of each row
                                                   while($row = $result->fetch_assoc()) {
 
+                                                        $frame_type="Rimless";
+                                                        if($row["frame_type"]==1){
+                                                            $frame_type="Full Rim";
+                                                        }elseif($row["frame_type"]==2){
+                                                            $frame_type="Semi Rim";
+                                                        }
+
                                                         $table = "";
                                                         $table .="<tr>";
                                                             $table .="<td><input type='checkbox' name='chk_delete[]' class='chk_delete' value='".$row['id']."'/></td>";
@@ -75,7 +82,7 @@ if (!isset($_SESSION['role'])) {
                                                             $table .="<td>".$row["full_name"]."</td>";
                                                             $table .="<td>".$row["prescription_date"]."</td>";
                                                             $table .="<td>".$row["diagnosis"]."</td>";
-                                                            $table .="<td>".$row["frame_type"]."</td>";
+                                                            $table .="<td>".$frame_type."</td>";
                                                             $table .= "<td class='d-flex justify-content-between'>
                                                                           <button class='btn btn-primary btn-sm btn-edit' id='".$row['id']."'>
                                                                             <i class='fa fa-pencil-square-o' aria-hidden='true'></i> Edit
@@ -194,6 +201,7 @@ include "../footer.php"; ?>
             }
             
         });
+        
     </script>
 </body>
 

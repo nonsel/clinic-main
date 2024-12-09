@@ -7,16 +7,36 @@
             <h4 class="modal-title">Confirmation for Checkout</h4>
         </div>
         <div class="modal-body">
-             <input type="hidden" value="'<?php $row['id'] ?>'" name="hidden_id" id="hidden_id"/>
+             <input type="hidden" value="'<?php echo $order_id; ?>'" name="hidden_id" id="hidden_id"/>
              <p>Are you sure you want to check out this record?</p>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>SI No.:</label>
+                        <input name="txt_si_no" class="form-control input-sm" type="text" placeholder="Total" id="txt_si_no" value="<?= date("Ymdhi").strtotime("now") ?>" readonly>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Customer Name:</label>
-                        <input name="txt_customer" class="form-control input-sm" type="text" placeholder="Ex.: Juan Dela Cruz" id="txt_customer">
+                        <select name="a_patient" class="form-control input-sm select2" style="width:100%" required="">
+                            <option disabled selected value="">-- Select --</option>
+                            <?php
+                                    $patient = mysqli_query($con,"SELECT * FROM tblpatient");
+                                    while($rowc = mysqli_fetch_array($patient)){
+                                        echo '
+                                        <option value="'.$rowc['id'].'">'.$rowc['firstname'].' '.$rowc['lastname'].'</option>';
+                                    }
+                            ?>   
+                        </select>
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">

@@ -45,6 +45,8 @@ if(isset($_POST['btn_delete']))
 }
 
 if (isset($_POST['btn_checkout'])) {
+
+    $txt_si_no = $_POST['txt_si_no'];
     $txt_customer = $_POST['txt_customer'];
     $txt_total = $_POST['txt_total'];
     $txt_cash = $_POST['txt_cash'];
@@ -75,7 +77,7 @@ if (isset($_POST['btn_checkout'])) {
 
     try {
         // Update tblorder with transno, customer, total, cash, and change
-        $update_order_query = mysqli_query($con, "UPDATE tblorder SET transno = '$transno', customer='$txt_customer', total='$txt_total', cash='$txt_cash', `change`='$txt_change' WHERE user_id = '$user_id' AND transno IS NULL");
+        $update_order_query = mysqli_query($con, "UPDATE tblorder SET transno = '$transno', customer='$txt_customer', total='$txt_total', cash='$txt_cash', `change`='$txt_change', si_no = '$txt_si_no' WHERE user_id = '$user_id' AND transno IS NULL");
 
         if (!$update_order_query) {
             throw new Exception('Error updating tblorder: ' . mysqli_error($con));

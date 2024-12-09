@@ -6,9 +6,9 @@ if(isset($_POST['btn_add'])){
     $category= $_POST['a_category'];
     $date_ordered = date("Y-m-d");
     $model_number = $_POST['a_model_number'];
-    $frame_brand = $_POST['a_frame_brand'];
+    // $frame_brand = $_POST['a_frame_brand'];
     $frame_type = $_POST['a_frame_type'];
-    $lens_type = $_POST['a_lens_type'];
+    // $lens_type = $_POST['a_lens_type'];
     $lens_coating = $_POST['a_lens_coating'];
     $sph = $_POST['a_sph'];
     $add = $_POST['a_add'];
@@ -32,9 +32,7 @@ if(isset($_POST['btn_add'])){
                                                             cat_id,
                                                             date_created,
                                                             model_number,
-                                                            frame_brand,
                                                             frame_type,
-                                                            lens_type,
                                                             lens_coating,
                                                             sph,
                                                             i_add,
@@ -47,9 +45,7 @@ if(isset($_POST['btn_add'])){
                                                             '$category',
                                                             '$date_ordered',
                                                             '$model_number',
-                                                            '$frame_brand', 
                                                             '$frame_type', 
-                                                            '$lens_type',
                                                             '$lens_coating',
                                                             '$sph',
                                                             '$add',
@@ -77,9 +73,9 @@ if (isset($_POST['btn_save'])) {
     $category= $_POST['i_category'];
     $date_updated = date("Y-m-d");
     $model_number = $_POST['i_model_number'];
-    $frame_brand = $_POST['i_frame_brand'];
+    // $frame_brand = $_POST['i_frame_brand'];
     $frame_type = $_POST['i_frame_type'];
-    $lens_type = $_POST['i_lens_type'];
+    // $lens_type = $_POST['i_lens_type'];
     $lens_coating = $_POST['i_lens_coating'];
     $sph = $_POST['i_sph'];
     $add = $_POST['i_add'];
@@ -100,9 +96,7 @@ if (isset($_POST['btn_save'])) {
                                     cat_id='$category',
                                     date_updated='$date_updated',
                                     model_number='$model_number',
-                                    frame_brand='$frame_brand',
                                     frame_type='$frame_type',
-                                    lens_type='$lens_type' ,
                                     lens_coating='$lens_coating',
                                     sph='$sph',
                                     i_add='$add',

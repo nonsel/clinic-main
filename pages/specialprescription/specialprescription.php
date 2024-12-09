@@ -147,7 +147,7 @@ include "../footer.php"; ?>
                 type: "POST",
                 data: form.serialize()+"&create=1",
                 success: function(response){
-                    location.reload();
+                    // location.reload();
                 },
                 error: function(){
 

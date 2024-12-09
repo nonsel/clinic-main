@@ -7,6 +7,7 @@ if(isset($_POST['create'])){
 	$supplier_id = $_POST['supplier_id'];
 	$date = $_POST['date'];
 	$due_date = $_POST['due_date'];
+
 	$od_sph = $_POST['od_sph'];
 	$od_cyl = $_POST['od_cyl'];
 	$od_axis = $_POST['od_axis'];
@@ -14,6 +15,15 @@ if(isset($_POST['create'])){
 	$od_prism_base = $_POST['od_prism_base'];
 	$od_pd = $_POST['od_pd'];
 	$od_qty = $_POST['od_qty'];
+
+    $os_sph = $_POST['os_sph'];
+    $os_cyl = $_POST['os_cyl'];
+    $os_axis = $_POST['os_axis'];
+    $os_add = $_POST['os_add'];
+    $os_prism_base = $_POST['os_prism_base'];
+    $os_pd = $_POST['os_pd'];
+    $os_qty = $_POST['os_qty'];
+
 	$dbc = $_POST['dbc'];
 	$lfv = $_POST['lfv'];
 	$tint = $_POST['tint'];
@@ -36,6 +46,7 @@ if(isset($_POST['create'])){
                                 supplier_id,
                                 `date`,
                                 due_date,
+
                                 od_sph,
                                 od_cyl,
                                 od_axis,
@@ -43,6 +54,15 @@ if(isset($_POST['create'])){
                                 od_prism_base,
                                 od_pd,
                                 od_quantity,
+
+                                os_sph,
+                                os_cyl,
+                                os_axis,
+                                os_add,
+                                os_prism_base,
+                                os_pd,
+                                os_quantity,
+
                                 dbc,
                                 lfv,
                                 tint,
@@ -62,6 +82,7 @@ if(isset($_POST['create'])){
                             '$supplier_id',
                             '$date',
                             '$due_date',
+
                             '$od_sph',
                             '$od_cyl',
                             '$od_axis',
@@ -69,6 +90,15 @@ if(isset($_POST['create'])){
                             '$od_prism_base',
                             '$od_pd',
                             '$od_qty',
+
+                            '$os_sph',
+                            '$os_cyl',
+                            '$os_axis',
+                            '$os_add',
+                            '$os_prism_base',
+                            '$os_pd',
+                            '$os_qty',
+
                             '$dbc',
                             '$lfv',
                             '$tint',
@@ -116,7 +146,7 @@ if( isset($_POST['delete']) ){
 
 if( isset($_POST['get_prescription']) ){
 
-	$sql = "SELECT *, od_quantity as od_qty FROM tblspecialprescription WHERE id = ".$_POST['id']." LIMIT 1";
+	$sql = "SELECT *, od_quantity as od_qty, os_quantity as os_qty FROM tblspecialprescription WHERE id = ".$_POST['id']." LIMIT 1";
     $result = $con->query($sql);
 
     $data = [];
@@ -141,6 +171,7 @@ if( isset($_POST['update']) ){
 	$supplier_id = $_POST['supplier_id'];
 	$date = $_POST['date'];
 	$due_date = $_POST['due_date'];
+
 	$od_sph = $_POST['od_sph'];
 	$od_cyl = $_POST['od_cyl'];
 	$od_axis = $_POST['od_axis'];
@@ -148,6 +179,15 @@ if( isset($_POST['update']) ){
 	$od_prism_base = $_POST['od_prism_base'];
 	$od_pd = $_POST['od_pd'];
 	$od_qty = $_POST['od_qty'];
+
+    $os_sph = $_POST['os_sph'];
+    $os_cyl = $_POST['os_cyl'];
+    $os_axis = $_POST['os_axis'];
+    $os_add = $_POST['os_add'];
+    $os_prism_base = $_POST['os_prism_base'];
+    $os_pd = $_POST['os_pd'];
+    $os_qty = $_POST['os_qty'];
+
 	$dbc = $_POST['dbc'];
 	$lfv = $_POST['lfv'];
 	$tint = $_POST['tint'];
@@ -170,6 +210,7 @@ if( isset($_POST['update']) ){
                 supplier_id='$supplier_id',
                 `date`='$date',
                 due_date='$due_date',
+
                 od_sph='$od_sph',
                 od_cyl='$od_cyl',
                 od_axis='$od_axis',
@@ -177,6 +218,15 @@ if( isset($_POST['update']) ){
                 od_prism_base='$od_prism_base',
                 od_pd='$od_pd',
                 od_quantity='$od_qty',
+
+                os_sph='$os_sph',
+                os_cyl='$os_cyl',
+                os_axis='$os_axis',
+                os_add='$os_add',
+                os_prism_base='$os_prism_base',
+                os_pd='$os_pd',
+                os_quantity='$os_qty',
+
                 dbc='$dbc',
                 lfv='$lfv',
                 tint='$tint',
