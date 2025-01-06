@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 09, 2024 at 05:05 AM
+-- Generation Time: Jan 06, 2025 at 04:18 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.33
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `clinic`
+-- Database: `recamadas`
 --
 
 -- --------------------------------------------------------
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `tbllogs` (
   `logdate` datetime NOT NULL,
   `action` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=171 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=220 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbllogs`
@@ -252,7 +252,56 @@ INSERT INTO `tbllogs` (`id`, `user`, `logdate`, `action`) VALUES
 (167, 'Administrator', '2024-12-09 11:02:21', 'Added Product Category: 1'),
 (168, 'Administrator', '2024-12-09 11:02:34', 'Added Category: 1'),
 (169, 'Administrator', '2024-12-09 11:02:44', 'Added Category: 2'),
-(170, 'Administrator', '2024-12-09 11:15:38', 'Added Category: 2');
+(170, 'Administrator', '2024-12-09 11:15:38', 'Added Category: 2'),
+(171, 'Administrator', '2025-01-01 11:34:16', 'Deleted patient with ID: 8'),
+(172, 'Administrator', '2025-01-01 11:37:48', 'Deleted patient with ID: 1'),
+(173, 'Administrator', '2025-01-01 11:38:01', 'Deleted patient with ID: 8'),
+(174, 'Administrator', '2025-01-01 13:40:20', 'Added Category: 2'),
+(175, '', '2025-01-01 14:01:20', 'Delete Product: 2'),
+(176, '', '2025-01-01 14:01:45', 'Delete Product: 2'),
+(177, 'Administrator', '2025-01-01 14:02:09', 'Delete Product: 2'),
+(178, 'Administrator', '2025-01-01 14:03:19', 'Delete Product: 1'),
+(179, 'Administrator', '2025-01-01 14:03:23', 'Delete Product: 3'),
+(180, '2', '2025-01-01 14:06:05', 'Edited Supplier with ID: 3, Name: Juan Dela Cruz, Contact Number: 09123546789, Address: asdasdas'),
+(181, '2', '2025-01-01 14:12:19', 'Added Supplier with Name: Test, Contact Number: 123123, Address: asdasdasd'),
+(182, '2', '2025-01-01 14:15:29', 'Edited Supplier with ID: 3, Name: Juan Dela Cruz, Contact Number: 09123546789, Address: asdasdas'),
+(183, 'Administrator', '2025-01-01 14:18:19', 'Delete Supplier: '),
+(184, 'Administrator', '2025-01-01 14:18:31', 'Delete Supplier: 3'),
+(185, 'Administrator', '2025-01-01 14:18:46', 'Delete Supplier: 8'),
+(186, '2', '2025-01-01 14:34:01', 'Added Prescription ID: '),
+(187, 'Administrator', '2025-01-01 22:58:39', 'Added patient with firstname: 0101, middlename: ,lastname: 0101, suffix: , phone number: 12312312312312, Date of Birth: 2025-01-01, PWD Citizent No: , Senior Citizen No: , Home Address: asdasdas, Medical History: '),
+(188, 'Administrator', '2025-01-01 22:58:59', 'Updated patient with ID: 9 to firstname: 0101, middlename: ,lastname: 0101, suffix: , phone number: 12312312312312, Date of Birth: 2025-01-01, PWD Citizent No: , Senior Citizen No: , Home Address: asdasdas, Medical History: '),
+(189, '2', '2025-01-01 23:01:00', 'Added Prescription ID: '),
+(190, '2', '2025-01-01 23:04:33', 'Added Prescription ID: '),
+(191, '2', '2025-01-01 23:05:03', 'Added Prescription ID: '),
+(192, '2', '2025-01-01 23:05:45', 'Added Prescription ID: '),
+(193, '2', '2025-01-01 23:06:30', 'Added Prescription ID: '),
+(194, '2', '2025-01-01 23:06:57', 'Added Prescription ID: '),
+(195, 'Administrator', '2025-01-02 20:27:47', 'Added Product Category: 1'),
+(196, 'Administrator', '2025-01-02 20:28:03', 'Added Product Category: 1'),
+(197, 'Administrator', '2025-01-02 20:28:50', 'Added Product Category: 1'),
+(198, 'Administrator', '2025-01-02 20:29:16', 'Added Product Category: 1'),
+(199, 'Administrator', '2025-01-02 20:29:37', 'Added Product Category: 1'),
+(200, 'Administrator', '2025-01-02 20:30:11', 'Added Product Category: 1'),
+(201, 'Administrator', '2025-01-02 20:30:45', 'Added Product Category: 1'),
+(202, 'Administrator', '2025-01-02 20:31:43', 'Added Product Category: 1'),
+(203, 'Administrator', '2025-01-02 20:31:59', 'Added Product Category: 1'),
+(204, 'Administrator', '2025-01-02 20:32:28', 'Added Product Category: 1'),
+(205, 'Administrator', '2025-01-02 20:33:54', 'Added Product Category: 2'),
+(206, 'Administrator', '2025-01-02 20:34:39', 'Added Product Category: 2'),
+(207, 'Administrator', '2025-01-02 20:35:23', 'Added Product Category: 2'),
+(208, 'Administrator', '2025-01-02 21:04:41', 'Added Category: 2'),
+(209, 'Administrator', '2025-01-02 21:04:56', 'Added Category: 2'),
+(210, 'Administrator', '2025-01-02 21:05:07', 'Added Category: 2'),
+(211, 'Administrator', '2025-01-02 21:05:17', 'Added Category: 2'),
+(212, 'Administrator', '2025-01-02 21:05:33', 'Added Category: 2'),
+(213, 'Administrator', '2025-01-02 21:07:05', 'Added Category: 2'),
+(214, 'Administrator', '2025-01-02 21:07:24', 'Added Category: 1'),
+(215, 'Administrator', '2025-01-02 21:07:44', 'Added Category: 1'),
+(216, 'Administrator', '2025-01-02 21:08:07', 'Added Category: 2'),
+(217, 'Administrator', '2025-01-02 21:08:25', 'Added Category: 1'),
+(218, 'Administrator', '2025-01-03 13:01:11', 'Added Category: 1'),
+(219, '2', '2025-01-03 22:44:57', 'Added Supplier with Name: a, Contact Number: a, Address: ');
 
 -- --------------------------------------------------------
 
@@ -275,18 +324,20 @@ CREATE TABLE IF NOT EXISTS `tblorder` (
   `change` int(11) DEFAULT NULL,
   `si_no` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `tblorder`
 --
 
 INSERT INTO `tblorder` (`id`, `product_id`, `quantity`, `date_updated`, `user_id`, `transno`, `customer`, `total`, `date_created`, `cash`, `change`, `si_no`) VALUES
-(1, 1, 10, '2024-09-13 19:07:46', 1, '09142024-0001', 'Juan Dela Cruz', 100, '2024-09-13 19:07:46', 500, 400, NULL),
-(2, 1, 1, '2024-09-22 19:08:44', 1, '09232024-0001', 'Pepito Manaloto', 15, '2024-09-22 19:08:44', 100, 85, NULL),
-(5, 12, 1, '2024-12-09 03:15:58', 1, '12092024-0001', '', 63, '2024-12-09 03:15:58', 63, 0, NULL),
-(6, 12, 1, '2024-12-09 03:16:19', 1, '12092024-0002', '', 63, '2024-12-09 03:16:19', 63, 0, NULL),
-(7, 12, 1, '2024-12-09 03:17:41', 1, '12092024-0003', '', 63, '2024-12-09 03:17:41', 63, 0, '2024120911451733715919');
+(1, 13, 10, '2024-09-13 19:07:46', 1, '09142024-0001', 'Juan Dela Cruz', 100, '2024-09-13 19:07:46', 500, 400, NULL),
+(2, 13, 1, '2024-09-22 19:08:44', 1, '09232024-0001', 'Pepito Manaloto', 15, '2024-09-22 19:08:44', 100, 85, NULL),
+(5, 13, 1, '2024-12-09 03:15:58', 1, '12092024-0001', '', 63, '2024-12-09 03:15:58', 63, 0, NULL),
+(6, 13, 1, '2024-12-09 03:16:19', 1, '12092024-0002', '', 63, '2024-12-09 03:16:19', 63, 0, NULL),
+(7, 13, 1, '2024-12-09 03:17:41', 1, '12092024-0003', '', 63, '2024-12-09 03:17:41', 63, 0, '2024120911451733715919'),
+(8, 13, 1, '2025-01-01 06:28:00', 2, NULL, NULL, NULL, '2025-01-01 06:28:00', NULL, NULL, NULL),
+(9, 16, 1, '2025-01-01 06:28:10', 2, NULL, NULL, NULL, '2025-01-01 06:28:10', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -309,19 +360,20 @@ CREATE TABLE IF NOT EXISTS `tblpatient` (
   `senior_citizen_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `home_address` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `medical_history` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `is_delete` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `tblpatient`
 --
 
-INSERT INTO `tblpatient` (`id`, `firstname`, `lastname`, `middlename`, `phoneno`, `adddate`, `sino`, `suffix`, `date_of_birth`, `pwd_citizen_no`, `senior_citizen_no`, `home_address`, `medical_history`) VALUES
-(1, 'Juans', 'Cruzs', 'Delas', '09123456879', '2024-09-09', 'Samples', '1111', '2024-12-17', '3', '4', '5', '6'),
-(4, '21111', '4111', '31111', '6111', NULL, NULL, '5111', '2024-12-12', '71111', '8111', '9111', '00000111'),
-(6, '1', '3', '2', '4', NULL, NULL, '', '2024-12-08', '5', '6', '7', '8'),
-(7, 'test1', '2', '1', '3', NULL, NULL, '', '2024-12-17', '', '', '4', '5'),
-(8, 'test33333', 'test3333333', '', '333333', NULL, NULL, '', '2024-12-20', '', '', '4333', '5333');
+INSERT INTO `tblpatient` (`id`, `firstname`, `lastname`, `middlename`, `phoneno`, `adddate`, `sino`, `suffix`, `date_of_birth`, `pwd_citizen_no`, `senior_citizen_no`, `home_address`, `medical_history`, `is_delete`) VALUES
+(4, '21111', '4111', '31111', '6111', NULL, NULL, '5111', '2024-12-12', '71111', '8111', '9111', '00000111', 0),
+(6, '1', '3', '2', '4', NULL, NULL, '', '2024-12-08', '5', '6', '7', '8', 0),
+(7, 'test1', '2', '1', '3', NULL, NULL, '', '2024-12-17', '', '', '4', '5', 0),
+(8, 'test33333', 'test3333333', '', '333333', NULL, NULL, '', '2024-12-20', '', '', '4333', '5333', 0),
+(9, '0101', '0101', '', '12312312312312', NULL, NULL, '', '2025-01-01', '', '', 'asdasdas', '', 0);
 
 -- --------------------------------------------------------
 
@@ -333,60 +385,63 @@ DROP TABLE IF EXISTS `tblprescription`;
 CREATE TABLE IF NOT EXISTS `tblprescription` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `patient_id` int(11) DEFAULT NULL,
-  `prescription_date` date DEFAULT NULL,
+  `prescription_date` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `details` text COLLATE utf8mb4_unicode_ci,
-  `refraction_od_sph` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_od_cyl` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_od_axis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_od_add` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_od_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_od_pd` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_os_sph` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_os_cyl` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_os_axis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_os_add` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_os_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `refraction_os_pd` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_od_sph` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_od_cyl` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_od_axis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_od_add` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_od_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_od_pd` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_os_sph` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_os_cyl` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_os_axis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_os_add` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_os_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `spectacle_os_pd` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_od_sph` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_od_cyl` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_od_axis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_od_add` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_od_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_od_pd` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_os_sph` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_os_cyl` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_os_axis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_os_add` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_os_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_lens_os_pd` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `diagnosis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `refraction_od_sph` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_od_cyl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_od_axis` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_od_add` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_od_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_od_pd` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_os_sph` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_os_cyl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_os_axis` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_os_add` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_os_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `refraction_os_pd` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_od_sph` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_od_cyl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_od_axis` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_od_add` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_od_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_od_pd` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_os_sph` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_os_cyl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_os_axis` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_os_add` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_os_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spectacle_os_pd` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_od_sph` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_od_cyl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_od_axis` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_od_add` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_od_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_od_pd` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_os_sph` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_os_cyl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_os_axis` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_os_add` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_os_prism_base` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_lens_os_pd` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `diagnosis` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `frame_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_delete` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `patient_id` (`patient_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `tblprescription`
 --
 
 INSERT INTO `tblprescription` (`id`, `patient_id`, `prescription_date`, `details`, `refraction_od_sph`, `refraction_od_cyl`, `refraction_od_axis`, `refraction_od_add`, `refraction_od_prism_base`, `refraction_od_pd`, `refraction_os_sph`, `refraction_os_cyl`, `refraction_os_axis`, `refraction_os_add`, `refraction_os_prism_base`, `refraction_os_pd`, `spectacle_od_sph`, `spectacle_od_cyl`, `spectacle_od_axis`, `spectacle_od_add`, `spectacle_od_prism_base`, `spectacle_od_pd`, `spectacle_os_sph`, `spectacle_os_cyl`, `spectacle_os_axis`, `spectacle_os_add`, `spectacle_os_prism_base`, `spectacle_os_pd`, `contact_lens_od_sph`, `contact_lens_od_cyl`, `contact_lens_od_axis`, `contact_lens_od_add`, `contact_lens_od_prism_base`, `contact_lens_od_pd`, `contact_lens_os_sph`, `contact_lens_os_cyl`, `contact_lens_os_axis`, `contact_lens_os_add`, `contact_lens_os_prism_base`, `contact_lens_os_pd`, `diagnosis`, `frame_type`, `is_delete`) VALUES
-(1, NULL, NULL, NULL, '1.1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2', 1),
+(1, 9, '', NULL, '1.1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2', 0),
 (2, 8, '2024-12-08', NULL, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', 'asdasdasdasdasd', '3', 0),
-(3, 8, '2024-12-08', NULL, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', 'asdasdasdasdasd', '3', 0),
-(4, 4, '2024-12-08', NULL, '1.1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '1', 0);
+(3, 8, '2024-12-09', NULL, '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', 'asdasdasdasdasd', '3', 0),
+(4, 4, '2025-01-01', NULL, '1.1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '1', 0),
+(5, 6, '2025-01-31', NULL, '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', 0),
+(6, 9, '2025-01-01', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '1', 0),
+(7, 4, '', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '3', 1);
 
 -- --------------------------------------------------------
 
@@ -398,6 +453,14 @@ DROP TABLE IF EXISTS `tblproduct`;
 CREATE TABLE IF NOT EXISTS `tblproduct` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cat_id` int(11) NOT NULL,
+  `lens_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lens_coating` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `prescription` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date_ordered` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `frame_brand` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `frame_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `price` float DEFAULT NULL,
   `qty` int(11) NOT NULL DEFAULT '1',
   `status` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ACTIVE',
@@ -405,35 +468,35 @@ CREATE TABLE IF NOT EXISTS `tblproduct` (
   `image` text COLLATE utf8mb4_unicode_ci,
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `date_updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `cat_id` int(11) NOT NULL,
   `supplier_id` int(11) DEFAULT NULL,
-  `model_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `frame_brand` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `frame_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lens_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lens_coating` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sph` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `i_add` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `model_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sph` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `i_add` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_delete` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `tblproduct`
 --
 
-INSERT INTO `tblproduct` (`id`, `name`, `price`, `qty`, `status`, `description`, `image`, `date_created`, `date_updated`, `cat_id`, `supplier_id`, `model_number`, `frame_brand`, `frame_type`, `lens_type`, `lens_coating`, `sph`, `i_add`) VALUES
-(1, 'Bioflu', 15, 489, 'ARCHIVED', 'This medicine is used for the relief of clogged nose, runny nose, cough from postnasal drip, itchy and watery eyes, sneezing, headache, sore throat, body aches, and fever associated with the common cold, allergic rhinitis, sinusitis, flu and other minor respiratory tract infections', '1726253889050_bioflu.png', '2024-09-14 02:58:09', '2024-12-08 00:00:00', 1, 3, '88', '88', '88', '88', '88', '88', '88'),
-(2, 'asd', 2, 1, 'ACTIVE', '3', NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 2, 8, '9', '9', '9', '9', '9', '9', '9'),
-(3, '11111', 5, 1, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 1, 3, '1', '2', '3', '4', '5', '6', '7'),
-(4, NULL, NULL, 1, 'ARCHIVED', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 1, 3, '4', '4', '4', '4', '4', '4', '4'),
-(5, NULL, NULL, 1, 'ARCHIVED', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 1, 3, '6', '6', '6', '6', '6', '6', '6'),
-(6, '2222', 5, 1, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 1, 8, '1', '1', '1', '1', '1', '1', '1'),
-(7, '3333', 6, 1, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 1, 8, '1', '1', '1', '1', '1', '1', '1'),
-(8, '123123', 50, 10, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 2, 3, '1', '1', '1', '1', '1', '1', '1'),
-(9, NULL, NULL, 1, 'ARCHIVED', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 11:46:33', 2, 3, '2', '2', '2', '2', '2', '2', '2'),
-(10, '123123', 100, 5, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 1, 8, '123', '123', '123', '213', '123', '123', '123'),
-(11, 'test1', 1, 2, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 13:49:25', 2, 3, '1', '1', '1', '1', '1', '1', '1'),
-(12, 'test333', 63, 7, 'ACTIVE', NULL, NULL, '2024-12-09 00:00:00', '2024-12-09 00:00:00', 2, 8, '13', NULL, '23', NULL, '33', '43', '53');
+INSERT INTO `tblproduct` (`id`, `name`, `code`, `cat_id`, `lens_type`, `lens_coating`, `prescription`, `date_ordered`, `frame_brand`, `frame_type`, `price`, `qty`, `status`, `description`, `image`, `date_created`, `date_updated`, `supplier_id`, `model_number`, `sph`, `i_add`, `is_delete`) VALUES
+(1, 'Bioflu', 'code1', 1, '88', '88', NULL, NULL, '88', '88', 15, 489, 'ARCHIVED', 'This medicine is used for the relief of clogged nose, runny nose, cough from postnasal drip, itchy and watery eyes, sneezing, headache, sore throat, body aches, and fever associated with the common cold, allergic rhinitis, sinusitis, flu and other minor respiratory tract infections', '1726253889050_bioflu.png', '2024-09-14 02:58:09', '2024-12-08 00:00:00', 3, '+0.25', '88', '88', 0),
+(2, 'asd', 'code2', 2, '9', '9', NULL, NULL, '9', '9', 2, 1, 'ACTIVE', '3', NULL, '2024-12-08 00:00:00', '2025-01-01 00:00:00', 8, '9', '9', '9', 1),
+(3, '11111', '', 1, '4', '5', NULL, NULL, '2', '3', 5, 1, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 3, '1', '6', '7', 0),
+(4, '333', 'code3', 1, '4', '4', NULL, NULL, '4', '4', NULL, 1, 'ARCHIVED', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 3, '4', '4', '4', 0),
+(5, NULL, 'code4', 1, '6', '6', NULL, NULL, '6', '6', NULL, 1, 'ARCHIVED', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 3, '6', '6', '6', 0),
+(6, '2222', 'code5', 1, '1', '1', NULL, NULL, '1', '1', 5, 1, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 8, '1', '1', '1', 0),
+(7, '3333', 'code6', 1, '1', '1', NULL, NULL, '1', '1', 6, 1, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 8, '1', '1', '1', 0),
+(8, '123123', 'code7', 2, '1', '1', NULL, NULL, '1', '1', 50, 10, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 3, '1', '1', '1', 0),
+(9, NULL, 'code8', 2, '2', '2', NULL, NULL, '2', '2', NULL, 1, 'ARCHIVED', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 11:46:33', 3, '2', '2', '2', 0),
+(10, '123123', 'code9', 1, '213', '123', NULL, NULL, '123', '123', 100, 5, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 00:00:00', 8, '123', '123', '123', 0),
+(11, 'test1', 'code10', 2, '1', '1', NULL, NULL, '1', '1', 1, 2, 'ACTIVE', NULL, NULL, '2024-12-08 00:00:00', '2024-12-08 13:49:25', 3, '1', '1', '1', 0),
+(12, 'test333', 'code11', 2, NULL, '33', NULL, NULL, NULL, '23', 63, 7, 'ACTIVE', NULL, NULL, '2024-12-09 00:00:00', '2024-12-09 00:00:00', 8, '13', '43', '53', 0),
+(13, '0102', '1', 1, '2', '3', '4', NULL, NULL, NULL, 6, 5, 'ACTIVE', NULL, NULL, '2025-01-02 00:00:00', '2025-01-02 20:31:43', 8, NULL, NULL, NULL, 0),
+(14, '0102', '1', 1, '2', '3', '4', NULL, NULL, NULL, 6, 5, 'ACTIVE', NULL, NULL, '2025-01-02 00:00:00', '2025-01-02 20:31:59', 3, NULL, NULL, NULL, 0),
+(15, '12 Frmae', '12', 2, '', '', '', '2025-01-08', '8', '9', 11, 10, 'ACTIVE', NULL, NULL, '2025-01-02 00:00:00', '2025-01-02 00:00:00', 8, NULL, NULL, NULL, 0),
+(16, 'Frame to Lens', '+16', 1, '+1', '+2', 'presc +3', '', '', '', 47, 37, 'ACTIVE', NULL, NULL, '2025-01-02 00:00:00', '2025-01-03 00:00:00', 10, NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -513,7 +576,7 @@ CREATE TABLE IF NOT EXISTS `tblspecialprescription` (
   `date_created` varchar(255) NOT NULL,
   `is_delete` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblspecialprescription`
@@ -521,9 +584,11 @@ CREATE TABLE IF NOT EXISTS `tblspecialprescription` (
 
 INSERT INTO `tblspecialprescription` (`id`, `patient_id`, `supplier_id`, `date`, `due_date`, `od_sph`, `od_cyl`, `od_axis`, `od_add`, `od_prism_base`, `od_pd`, `od_quantity`, `os_sph`, `os_cyl`, `os_axis`, `os_add`, `os_prism_base`, `os_pd`, `os_quantity`, `dbc`, `lfv`, `tint`, `lens`, `frame_code`, `frame_type`, `frame_material`, `description`, `remarks`, `status`, `claimed_date`, `date_created`, `is_delete`) VALUES
 (1, '4', '3', '2024-12-01', '2024-12-02', '11', '21', '31', '41', '51', '61', '71', '', '', '', '', '', '', '', '81', '91', '101', '111', '121', '2', '2', '131', '141', '1', '2024-12-03', '2024-12-08', 1),
-(2, '1', '3', '2024-12-20', '2025-01-02', '1', '1', '1', '1', '1', '1', '11', '', '', '', '', '', '', '', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '', '2024-12-08', 0),
-(3, '7', '8', '2024-12-18', '2024-12-25', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '', '2024-12-08', 0),
-(4, '1', '3', '2025-01-01', '2024-12-18', '1', '2', '3', '4', '5', '6', '7', '88', '99', '1010', '1111', '1212', '1313', '1414', '15', '16', '17', '18', '19', '1', '1', '20', '21', '2', '', '2024-12-09', 0);
+(2, '4', '3', '2024-12-20', '2025-01-02', '1', '1', '1', '1', '1', '1', '11', '', '', '', '', '', '', '', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '', '2024-12-08', 1),
+(3, '7', '8', '2024-12-18', '2024-12-25', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', '', '', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '', '2024-12-08', 1),
+(4, '4', '3', '2025-01-01', '2024-12-18', '1', '2', '3', '4', '5', '6', '7', '88', '99', '1010', '1111', '1212', '1313', '1414', '15', '16', '17', '18', '19', '1', '1', '20', '21', '2', '', '2024-12-09', 1),
+(5, '4', '3', '2025-01-01', '2025-01-15', '11', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '11', '1', '2025-01-09', '2025-01-01', 0),
+(6, '9', '10', '2025-01-21', '2025-01-21', '12', '112', '12', '12', '12', '12', '12', '12', '12', '12', '13', '13', '13', '4', '15', '15', '15', '15', '15', '1', '2', 'asda5', '15', '1', '2025-01-08', '2025-01-01', 0);
 
 -- --------------------------------------------------------
 
@@ -539,16 +604,19 @@ CREATE TABLE IF NOT EXISTS `tblsupplier` (
   `products_ordered` text COLLATE utf8mb4_unicode_ci,
   `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_created` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `is_delete` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `tblsupplier`
 --
 
-INSERT INTO `tblsupplier` (`id`, `name`, `contact_number`, `products_ordered`, `address`, `date_created`) VALUES
-(3, 'Juan Dela Cruz', '09123546789', 'Medicines', '', ''),
-(8, '1', '1', NULL, '1', '2024-12-08');
+INSERT INTO `tblsupplier` (`id`, `name`, `contact_number`, `products_ordered`, `address`, `date_created`, `is_delete`) VALUES
+(3, 'Juan Dela Cruz', '09123546789', 'Medicines', 'asdasdas', '', 0),
+(8, '1', '1', NULL, '1', '2024-12-08', 0),
+(10, 'Test', '123123', NULL, 'asdasdasd', '2025-01-01', 0),
+(11, 'a', 'a', NULL, '', '2025-01-03', 0);
 
 -- --------------------------------------------------------
 
